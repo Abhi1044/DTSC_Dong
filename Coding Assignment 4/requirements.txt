@@ -1,0 +1,11 @@
+openai
+requests
+beautifulsoup4
+lxml
+pandas
+supabase
+streamlit
+modal
+python-dotenv
+pypdf
+pdfplumber

@@ -1,0 +1,48 @@
+
+=== ARTICLE 1 ===
+TITLE: Tech Stocks Rally as AI Investments Show Promise
+URL: https://www.wsj.com/articles/sample-tech-rally
+SCRAPED: 2025-09-24T10:30:00
+
+CONTENT:
+Technology stocks surged in morning trading as investors showed renewed confidence in artificial intelligence investments. Major tech companies reported stronger-than-expected earnings, driven by increased demand for AI-powered solutions.
+
+The Nasdaq Composite Index gained 2.3% in early trading, with semiconductor stocks leading the advance. Analysts point to robust corporate spending on AI infrastructure as a key driver of the rally.
+
+"We're seeing a fundamental shift in how businesses approach technology adoption," said Sarah Johnson, senior equity analyst at Investment Research Group. "Companies are no longer viewing AI as experimental but as essential for competitive advantage."
+
+Market participants are closely watching upcoming earnings reports from major cloud providers, expecting continued strength in AI-related revenue streams.
+
+==================================================
+
+=== ARTICLE 2 ===
+TITLE: Federal Reserve Signals Cautious Approach to Interest Rate Changes
+URL: https://www.wsj.com/articles/sample-fed-rates
+SCRAPED: 2025-09-24T11:15:00
+
+CONTENT:
+Federal Reserve officials indicated they will take a measured approach to future interest rate adjustments, citing mixed economic signals and global uncertainty. The central bank's latest meeting minutes revealed ongoing debate about the pace of monetary policy changes.
+
+Economic data shows resilient consumer spending but softening in manufacturing activity. Inflation measures remain above the Fed's target, though the pace of price increases has moderated from recent peaks.
+
+"The Fed is walking a tightrope between supporting economic growth and managing inflation expectations," noted economist Michael Davis. "Recent market volatility adds another layer of complexity to their decision-making process."
+
+Financial markets reacted positively to the cautious tone, with bond yields declining and equity indices extending gains.
+
+==================================================
+
+=== ARTICLE 3 ===
+TITLE: Energy Sector Faces Transition Challenges Amid Climate Policy Changes
+URL: https://www.wsj.com/articles/sample-energy-transition
+SCRAPED: 2025-09-24T12:00:00
+
+CONTENT:
+Energy companies are navigating a complex landscape of regulatory changes and shifting investor priorities as climate policies continue to evolve. Traditional oil and gas firms are increasing investments in renewable energy while maintaining their core operations.
+
+The sector faces pressure from multiple directions: regulatory requirements for reduced emissions, investor demands for sustainable practices, and market dynamics favoring cleaner energy sources.
+
+Several major energy companies announced new partnerships with renewable technology firms this quarter. These collaborations aim to accelerate the development of wind, solar, and energy storage projects.
+
+"The transition is not just about compliance—it's about positioning for long-term competitiveness," explained energy industry consultant Rebecca Martinez. "Companies that adapt quickly will have significant advantages in the evolving energy market."
+
+==================================================

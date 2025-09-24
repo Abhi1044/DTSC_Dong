@@ -1,0 +1,52 @@
+{
+  "articles": [
+    {
+      "id": "article-1",
+      "title": "Tech Stocks Rally as AI Investments Show Promise",
+      "summary": "Technology stocks surged as strong earnings and increased demand for AI solutions boosted investor confidence. The Nasdaq Composite Index rose 2.3%, with semiconductor stocks leading the gains. Analysts highlighted robust corporate spending on AI infrastructure as a key driver of the rally.",
+      "sentiment": "very_positive",
+      "sentiment_score": 0.8,
+      "key_topics": [
+        "AI investments",
+        "tech earnings",
+        "Nasdaq rally",
+        "semiconductor stocks"
+      ],
+      "market_impact": "bullish",
+      "source_url": "https://www.wsj.com/articles/sample-tech-rally",
+      "extracted_at": "2025-09-24T10:30:00"
+    },
+    {
+      "id": "article-2",
+      "title": "Federal Reserve Signals Cautious Approach to Interest Rate Changes",
+      "summary": "The Federal Reserve signaled a measured approach to interest rate adjustments, citing mixed economic signals and moderated inflation. Markets reacted positively, with bond yields declining and equity indices rising.",
+      "sentiment": "positive",
+      "sentiment_score": 0.5,
+      "key_topics": [
+        "Federal Reserve",
+        "interest rates",
+        "inflation",
+        "economic signals"
+      ],
+      "market_impact": "bullish",
+      "source_url": "https://www.wsj.com/articles/sample-fed-rates",
+      "extracted_at": "2025-09-24T11:15:00"
+    },
+    {
+      "id": "article-3",
+      "title": "Energy Sector Faces Transition Challenges Amid Climate Policy Changes",
+      "summary": "Energy companies are adapting to regulatory and market pressures by increasing investments in renewable energy. New partnerships aim to accelerate clean energy projects, positioning firms for long-term competitiveness in a shifting landscape.",
+      "sentiment": "neutral",
+      "sentiment_score": 0.2,
+      "key_topics": [
+        "energy transition",
+        "climate policy",
+        "renewable investments",
+        "regulatory challenges"
+      ],
+      "market_impact": "mixed",
+      "source_url": "https://www.wsj.com/articles/sample-energy-transition",
+      "extracted_at": "2025-09-24T12:00:00"
+    }
+  ]
+}
