@@ -39,13 +39,13 @@ def run_pipeline(max_articles=3, section_url="https://www.wsj.com/news/business"
         
         if raw_blob:
             blob_file = collector.save_blob(raw_blob)
-            print(f"✅ Collection complete: {blob_file}")
+            print(f"Collection complete: {blob_file}")
         else:
-            print("❌ Collection failed")
+            print("Collection failed")
             return False
             
     except Exception as e:
-        print(f"❌ Collection error: {e}")
+        print(f"Collection error: {e}")
         return False
     
     # Step 2: Structure the data
@@ -58,14 +58,14 @@ def run_pipeline(max_articles=3, section_url="https://www.wsj.com/news/business"
         if structured_data and structured_data.get('articles'):
             json_file = structurer.save_structured_data(structured_data)
             article_count = len(structured_data['articles'])
-            print(f"✅ Structuring complete: {article_count} articles processed")
+            print(f"Structuring complete: {article_count} articles processed")
             print(f"   Saved to: {json_file}")
         else:
-            print("❌ Structuring failed")
+            print("Structuring failed")
             return False
             
     except Exception as e:
-        print(f"❌ Structuring error: {e}")
+        print(f"Structuring error: {e}")
         return False
     
     # Step 3: Load to database
@@ -81,7 +81,7 @@ def run_pipeline(max_articles=3, section_url="https://www.wsj.com/news/business"
             success = loader.upsert_articles(df)
             
             if success:
-                print("✅ Loading complete")
+                print("Loading complete")
                 
                 # Show summary
                 print("\\n" + "="*60)
@@ -112,14 +112,14 @@ def run_pipeline(max_articles=3, section_url="https://www.wsj.com/news/business"
                 
                 return True
             else:
-                print("❌ Loading failed")
+                print("Loading failed")
                 return False
         else:
-            print("❌ No data to load")
+            print("No data to load")
             return False
             
     except Exception as e:
-        print(f"❌ Loading error: {e}")
+        print(f"Loading error: {e}")
         return False
 
 def test_components():
@@ -133,11 +133,11 @@ def test_components():
         client = LLMClient()
         response = client.test_connection()
         if response:
-            print(f"✅ LLM Client working: {response[:50]}...")
+            print(f"LLM Client working: {response[:50]}...")
         else:
-            print("❌ LLM Client failed")
+            print("LLM Client failed")
     except Exception as e:
-        print(f"❌ LLM Client error: {e}")
+        print(f"LLM Client error: {e}")
     
     # Test Collector
     print("\\n2. Testing Collector...")
@@ -146,22 +146,22 @@ def test_components():
         # Create sample content instead of scraping
         sample_content = collector.create_sample_content()
         if len(sample_content) > 100:
-            print("✅ Collector working")
+            print("Collector working")
         else:
-            print("❌ Collector failed")
+            print("Collector failed")
     except Exception as e:
-        print(f"❌ Collector error: {e}")
+        print(f"Collector error: {e}")
     
     # Test Supabase connection
     print("\\n3. Testing Supabase connection...")
     try:
         loader = SupabaseLoader()
         if loader.supabase:
-            print("✅ Supabase connected")
+            print("Supabase connected")
         else:
-            print("⚠️  Supabase not configured (will use CSV backup)")
+            print("WARNING: Supabase not configured (will use CSV backup)")
     except Exception as e:
-        print(f"❌ Supabase error: {e}")
+        print(f"Supabase error: {e}")
 
 if __name__ == "__main__":
     print("WSJ Sentiment Analysis Pipeline\\n")
@@ -174,22 +174,22 @@ if __name__ == "__main__":
             max_articles = int(sys.argv[2]) if len(sys.argv) > 2 else 3
             success = run_pipeline(max_articles=max_articles)
             if success:
-                print("\\n🎉 Pipeline completed successfully!")
+                print("\\nPipeline completed successfully!")
             else:
-                print("\\n💥 Pipeline failed!")
+                print("\\nPipeline execution failed!")
         else:
             print("Usage: python pipeline.py [test|run] [max_articles]")
     else:
         # Default: run the full pipeline
         success = run_pipeline(max_articles=3)
         if success:
-            print("\\n🎉 Pipeline completed successfully!")
+            print("\\nPipeline completed successfully!")
             print("\\nNext steps:")
             print("1. Set up your Supabase database (see schema.py)")
             print("2. Run the Streamlit app: streamlit run src/streamlit_app.py")
             print("3. Deploy on Modal")
         else:
-            print("\\n💥 Pipeline failed!")
+            print("\\nPipeline execution failed!")
             print("\\nTroubleshooting:")
             print("1. Check your .env file has correct API keys")
             print("2. Run 'python pipeline.py test' to test components")

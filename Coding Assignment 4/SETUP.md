@@ -3,7 +3,7 @@
 ## Overview
 This pipeline collects Wall Street Journal articles, analyzes sentiment using OpenAI's LLM, stores structured data in Supabase, and displays insights through a Streamlit dashboard deployed on Modal.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 ```bash
@@ -73,7 +73,7 @@ python pipeline.py run 5  # Collect 5 articles
 streamlit run src/streamlit_app.py
 ```
 
-## 📊 Pipeline Components
+## Pipeline Components
 
 ### 1. **Collector** (`src/collector.py`)
 - Scrapes WSJ business section
@@ -98,7 +98,7 @@ streamlit run src/streamlit_app.py
 - Card and table views for articles
 - Real-time data from Supabase
 
-## 🚀 Modal Deployment
+## Modal Deployment
 
 ### 1. Install Modal CLI
 ```bash
@@ -125,7 +125,7 @@ modal secret create supabase-secret \
 modal deploy modal_app.py
 ```
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues:
 
@@ -157,7 +157,7 @@ ls data/                    # Should have structured_articles.json
 python -c "import json; print(len(json.load(open('data/structured_articles.json'))['articles']))"
 ```
 
-## 📁 Project Structure
+## Project Structure
 ```
 ├── src/
 │   ├── llm_client.py       # OpenAI client wrapper
@@ -175,7 +175,7 @@ python -c "import json; print(len(json.load(open('data/structured_articles.json'
 └── README.md
 ```
 
-## 🎯 Expected Output
+## Expected Output
 
 1. **Raw Articles**: 3-5 WSJ articles saved as text blob
 2. **Structured Data**: JSON with sentiment analysis for each article
@@ -186,7 +186,7 @@ python -c "import json; print(len(json.load(open('data/structured_articles.json'
    - Article cards with summaries
    - Filtering and search capabilities
 
-## 🤖 Why LLM for This Task?
+## Why LLM for This Task?
 
 LLMs excel at this use case because they can:
 - **Understand Context**: Financial sentiment isn't just positive/negative words
@@ -197,13 +197,13 @@ LLMs excel at this use case because they can:
 
 Traditional NLP would struggle with the nuanced financial context and structured output requirements.
 
-## 📋 Assignment Deliverables Checklist
+## Assignment Deliverables Checklist
 
-- ✅ **LLM Client**: OpenAI integration with provided endpoint
-- ✅ **Collector**: WSJ web scraper with BeautifulSoup  
-- ✅ **Structurer**: LLM converts text → JSON with sentiment
-- ✅ **Loader**: JSON → DataFrame → Supabase with upsert
-- ✅ **UI**: Streamlit dashboard with visualizations
-- ✅ **Modal Deployment**: Cloud deployment configuration
-- ✅ **GitHub Ready**: Code without API keys
-- ✅ **Report**: This documentation explaining the approach
+- **LLM Client**: OpenAI integration with provided endpoint
+- **Collector**: WSJ web scraper with BeautifulSoup  
+- **Structurer**: LLM converts text to JSON with sentiment
+- **Loader**: JSON to DataFrame to Supabase with upsert
+- **UI**: Streamlit dashboard with visualizations
+- **Modal Deployment**: Cloud deployment configuration
+- **GitHub Ready**: Code without API keys
+- **Report**: This documentation explaining the approach

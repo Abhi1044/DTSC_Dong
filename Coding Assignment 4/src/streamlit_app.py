@@ -23,7 +23,7 @@ except ImportError:
 # Page configuration
 st.set_page_config(
     page_title="WSJ Sentiment Analysis Dashboard",
-    page_icon="📈",
+    page_icon="�",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -160,18 +160,18 @@ def create_sentiment_timeline(df):
 def display_article_card(article):
     """Display an individual article card"""
     sentiment_color = {
-        'very_positive': '🟢',
-        'positive': '🟡', 
-        'neutral': '⚪',
-        'negative': '🟠',
-        'very_negative': '🔴'
+        'very_positive': 'Very Positive',
+        'positive': 'Positive', 
+        'neutral': 'Neutral',
+        'negative': 'Negative',
+        'very_negative': 'Very Negative'
     }
     
-    market_emoji = {
-        'bullish': '📈',
-        'bearish': '📉',
-        'neutral': '➖',
-        'mixed': '🔀'
+    market_impact_display = {
+        'bullish': 'Bullish',
+        'bearish': 'Bearish',
+        'neutral': 'Neutral',
+        'mixed': 'Mixed'
     }
     
     with st.container():
@@ -192,9 +192,9 @@ def display_article_card(article):
                 st.markdown(f"**Topics:** {topic_tags}")
         
         with col2:
-            st.markdown(f"**Sentiment:** {sentiment_color.get(article['sentiment'], '⚪')} {article['sentiment']}")
+            st.markdown(f"**Sentiment:** {sentiment_color.get(article['sentiment'], 'Unknown')}")
             st.markdown(f"**Score:** {article['sentiment_score']:.2f}")
-            st.markdown(f"**Market Impact:** {market_emoji.get(article['market_impact'], '➖')} {article['market_impact']}")
+            st.markdown(f"**Market Impact:** {market_impact_display.get(article['market_impact'], 'Unknown')}")
             
             if article['source_url'] != 'unknown':
                 st.markdown(f"[Read Original]({article['source_url']})")
@@ -202,7 +202,7 @@ def display_article_card(article):
         st.markdown("---")
 
 def main():
-    st.title("📈 WSJ Sentiment Analysis Dashboard")
+    st.title("WSJ Sentiment Analysis Dashboard")
     st.markdown("Real-time sentiment analysis of Wall Street Journal articles using AI")
     
     # Load data
@@ -216,13 +216,13 @@ def main():
     
     # Data source indicator
     source_indicators = {
-        "supabase": "🟢 Live Database",
-        "json": "🟡 Local JSON File", 
-        "csv": "🟠 CSV Backup",
-        "none": "🔴 No Data"
+        "supabase": "Live Database",
+        "json": "Local JSON File", 
+        "csv": "CSV Backup",
+        "none": "No Data"
     }
     
-    st.sidebar.markdown(f"**Data Source:** {source_indicators.get(data_source, '❓ Unknown')}")
+    st.sidebar.markdown(f"**Data Source:** {source_indicators.get(data_source, 'Unknown')}")
     st.sidebar.markdown(f"**Last Updated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
     # Sidebar filters
@@ -335,7 +335,7 @@ def main():
             )
     
     # Refresh button
-    if st.sidebar.button("🔄 Refresh Data"):
+    if st.sidebar.button("Refresh Data"):
         st.cache_data.clear()
         st.rerun()
 
